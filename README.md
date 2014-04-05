@@ -2,7 +2,11 @@
 Download the minified version of the plugin, include it after jQuery and:
 ```
 <script type="text/javascript">
+$(document).ready(function(){
+
 $.goup();
+
+});
 </script>
 ```
 
