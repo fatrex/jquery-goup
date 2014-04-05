@@ -7,7 +7,19 @@
     <meta name="description" content="jQuery GoUp! : A simple jQuery plugin that let users of your web pages go back directly to the top." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="javascripts/jquery.goup.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$.goup({
+				trigger : 100,
+				bottomOffset: 150,
+				locationOffset:100
+			});
+			
+		});
+	</script>
     <title>jQuery GoUp!</title>
   </head>
 
@@ -37,9 +49,16 @@
 <p>Download the minified version of the plugin, include it after jQuery and:</p>
 
 <pre><code>&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
 $.goup();
+});
 &lt;/script&gt;
 </code></pre>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Demo</h3>
+<p>Yeah! You can see it in action on this page. If you scroll down, you can see, on the bottom right, the magic! </p>
+
 
 <h3>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
