@@ -10,6 +10,9 @@ $.goup();
 </script>
 ```
 
+### Demo
+Yeah! You can see a live demo [here](http://ryuk87.github.io/jquery-goup/): http://ryuk87.github.io/jquery-goup/
+
 ### Options
 In this first version there are a few options that you can use to make this little thing suits your needs:
 
