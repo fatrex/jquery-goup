@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="javascripts/jquery.goup.min.js"></script>
+	<script type="text/javascript" src="https://raw.githubusercontent.com/Ryuk87/jquery-goup/master/jquery.goup.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			
@@ -82,10 +82,13 @@ $.goup();
 <strong>trigger</strong> : integer. After how many scrolled (down obviously) pixels the thing must be shown. (<em>default is 500</em>)</li>
 <li>
 <strong>animationSpeed</strong> : "slow", "normal", "fast". The speed at which the user will be brought back up (<em>default is "slow"</em>)</li>
+<strong>hideUnderWidth</strong> : integer. The threshold of window width under which the thing is permanently hidden (<em>default is 500</em>)</li>
 </ul><h3>
-<a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Future Versions?</h3>
-
-<p>You can count on that! I've just begun...</p>
+<a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
+<h4>v0.1.5 (04-06-2014)</h4>
+<p>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</p>
+<h4>v0.1.0 (04-05-2014)</h4>
+<p>Initial Release</p>
 
 <h3>
 <a name="license-and-copyright" class="anchor" href="#license-and-copyright"><span class="octicon octicon-link"></span></a>License and Copyright</h3>
