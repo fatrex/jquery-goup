@@ -5,9 +5,9 @@
     "keywords": [
         "scroll",
         "backtotop",
-	"scrolltotop"
+		"scrolltotop"
     ],
-    "version": "0.1.0",
+    "version": "0.1.5",
     "author": {
         "name": "Daniele Lenares",
         "url": "https://github.com/Ryuk87"
@@ -17,12 +17,13 @@
             "type": "MIT",
             "url": "http://www.opensource.org/licenses/mit-license.php"
         },
-	{
-	    "type":"GPL",
-	    "url":"http://www.gnu.org/licenses/gpl.html"	
-	}
+		{
+			"type":"GPL",
+			"url":"http://www.gnu.org/licenses/gpl.html"	
+		}
     ],
     "bugs": "https://github.com/Ryuk87/jquery-goup/issues",
+    "demo" : "http://ryuk87.github.io/jquery-goup/",
     "homepage": "http://ryuk87.github.io/jquery-goup/",
     "docs": "http://ryuk87.github.io/jquery-goup/",
     "download": "http://ryuk87.github.io/jquery-goup/",
