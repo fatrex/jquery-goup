@@ -1,4 +1,4 @@
-### Easy Peasy
+#### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
 ```
 <script type="text/javascript">
@@ -24,9 +24,14 @@ In this first version there are a few options that you can use to make this litt
 * **arrowClass** : string. Read above. (_default is "goup-arrow"_)
 * **trigger** : integer. After how many scrolled (down obviously) pixels the thing must be shown. (_default is 500_)
 * **animationSpeed** : "slow", "normal", "fast". The speed at which the user will be brought back up (_default is "slow"_)
+* **hideUnderWidth** : integer. The threshold of window width under which the thing is permanently hidden (_default is 500_) 
 
-### Future Versions?
-You can count on that! I'm just begun...
+### Changelog
+#### v0.1.5 (04-06-2014)
+Added width threshold (_hideUnderWidth_) to hide the button on small screens.
+
+#### v0.1.0 (04-05-2014)
+Initial Release
 
 ### License and Copyright
 jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.html) and [MIT](http://www.opensource.org/licenses/mit-license.php) licenses.

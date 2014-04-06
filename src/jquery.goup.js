@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.1.0
+ * Version 0.1.5
  *
  */
 (function ( $ ) {
@@ -20,7 +20,8 @@
 				containerClass : 'goup-container',
 				arrowClass : 'goup-arrow',
 				trigger: 500,
-				animationSpeed : 'slow'
+				animationSpeed : 'slow',
+				hideUnderWidth : 500
 			}, user_params);
 		/* */
 		
@@ -55,6 +56,11 @@
 		if (trigger < 0) {
 			trigger = 0;
 		}
+		
+		var hideUnderWidth = params.hideUnderWidth;
+		if (hideUnderWidth < 0) {
+			hideUnderWidth = 0;
+		}
 		/* */
 		
 		/* Container Style */
@@ -84,18 +90,40 @@
 			'border-color' : 'transparent transparent #fff transparent' 
 		};
 		$(arrow).css(arrowStyle);
+		/* */
+		
+		
+		
+		/* Trigger Hide under a certain width */
+		var isHidden = false;
+		$(window).resize(function(){
+			if ($(window).outerWidth() <= hideUnderWidth) {
+				isHidden = true;
+				$(container).fadeOut();
+			} else {
+				isHidden = false;
+				$(window).trigger('scroll');
+			}
+		});
+		/* If i load the page under a certain width, i don't have the event 'resize' */
+		if ($(window).outerWidth() <= hideUnderWidth) {
+			isHidden = true;
+			$(container).hide();
+		}
 		
 		
 		/* Trigger show event */
 		$(window).scroll(function(){
-			if ($('body').scrollTop() >= trigger) {
+			if ($('body').scrollTop() >= trigger && !isHidden) {
 				$(container).fadeIn();
 			}
 			
-			if ($('body').scrollTop() < trigger) {
+			if ($('body').scrollTop() < trigger && !isHidden) {
 				$(container).fadeOut();
 			}
 		});
+		
+
 		
 		/* Click event */
 		$(container).on('click', function(){
