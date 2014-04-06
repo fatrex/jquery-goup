@@ -27,6 +27,9 @@ In this first version there are a few options that you can use to make this litt
 * **hideUnderWidth** : integer. The threshold of window width under which the thing is permanently hidden (_default is 500_) 
 
 ### Changelog
+#### v0.1.6 (04-06-2014)
+Fixed a bug for Firefox 28 preventing the button to show up.
+
 #### v0.1.5 (04-06-2014)
 Added width threshold (_hideUnderWidth_) to hide the button on small screens.
 

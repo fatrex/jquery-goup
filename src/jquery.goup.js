@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.1.5
+ * Version 0.1.6
  *
  */
 (function ( $ ) {
@@ -114,11 +114,11 @@
 		
 		/* Trigger show event */
 		$(window).scroll(function(){
-			if ($('body').scrollTop() >= trigger && !isHidden) {
+			if ($(window).scrollTop() >= trigger && !isHidden) {
 				$(container).fadeIn();
 			}
 			
-			if ($('body').scrollTop() < trigger && !isHidden) {
+			if ($(window).scrollTop() < trigger && !isHidden) {
 				$(container).fadeOut();
 			}
 		});
