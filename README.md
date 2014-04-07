@@ -11,20 +11,21 @@ $.goup();
 ```
 
 ### Demo
-Yeah! You can see a live demo [here](http://ryuk87.github.io/jquery-goup/): http://ryuk87.github.io/jquery-goup/
+Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 
 ### Options
-In this first version there are a few options that you can use to make this little thing suits your needs:
 
-* **location** : "right" or "left". On wich side the thing will be shown (_default is "right"_);
-* **locationOffset** : integer. How many pixels separates the thing from the edge of the screen (based on the location setted) (_default is 20_)
-* **bottomOffset** : integer. How many pixels separates the thing from the bottom edge of the screen (_default is 10_);
-* **containerRadius** : integer. Make you transform a square in a circle (yeah, it's magic!) (_default is 10_)
-* **containerClass** : string. Don't you like the name i chose? You can change it! (I'm a little sad though...) (_default is "goup-container"_)
-* **arrowClass** : string. Read above. (_default is "goup-arrow"_)
-* **trigger** : integer. After how many scrolled (down obviously) pixels the thing must be shown. (_default is 500_)
-* **animationSpeed** : "slow", "normal", "fast". The speed at which the user will be brought back up (_default is "slow"_)
-* **hideUnderWidth** : integer. The threshold of window width under which the thing is permanently hidden (_default is 500_) 
+| Name            	| Description                                                                                    | Type    | Default        |
+|-------------------|------------------------------------------------------------------------------------------------|---------|----------------|
+| `location`        | On which side the button will be shown ("left" or "right")                                     | String  | right          |
+| `locationOffset`  | How many pixel the button is distant from the edge of the screen, based on the location setted | Integer | 20             |
+| `bottomOffset`    | How many pixel the button is distant from the bottom edge of the screen                        | Integer | 10             |
+| `containerRadius` | Let you transform a square in a circle (yeah, it's magic!)                                     | Integer | 10             |
+| `containerClass`  | The class name given to the button container                                                   | String  | goup-container |
+| `arrowClass`      | The class name given to the arrow container                                                    | String  | goup-arrow     |
+| `trigger`         | After hoiw many scrolled down pixels the button must be shown                                  | Integer | 500            |
+| `animationSpeed`  | The speed at which the user will be brought back to the top ("slow", "normal" or "fast")       | String  | slow           |
+| `hideUnderWidth`  | The threshold of window width under which the button is permanently hidden                     | Integer | 500            |
 
 ### Changelog
 #### v0.1.6 (04-06-2014)
