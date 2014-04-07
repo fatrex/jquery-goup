@@ -62,28 +62,73 @@ $.goup();
 
 <h3>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
-
-<p>In this first version there are a few options that you can use to make this little thing suits your needs:</p>
-
-<ul>
-<li>
-<strong>location</strong> : "right" or "left". On wich side the thing will be shown (<em>default is "right"</em>);</li>
-<li>
-<strong>locationOffset</strong> : integer. How many pixels separates the thing from the edge of the screen (based on the location setted) (<em>default is 20</em>)</li>
-<li>
-<strong>bottomOffset</strong> : integer. How many pixels separates the thing from the bottom edge of the screen (<em>default is 10</em>);</li>
-<li>
-<strong>containerRadius</strong> : integer. Make you transform a square in a circle (yeah, it's magic!) (<em>default is 10</em>)</li>
-<li>
-<strong>containerClass</strong> : string. Don't you like the name i chose? You can change it! (I'm a little sad though...) (<em>default is "goup-container"</em>)</li>
-<li>
-<strong>arrowClass</strong> : string. Read above. (<em>default is "goup-arrow"</em>)</li>
-<li>
-<strong>trigger</strong> : integer. After how many scrolled (down obviously) pixels the thing must be shown. (<em>default is 500</em>)</li>
-<li>
-<strong>animationSpeed</strong> : "slow", "normal", "fast". The speed at which the user will be brought back up (<em>default is "slow"</em>)</li>
-<strong>hideUnderWidth</strong> : integer. The threshold of window width under which the thing is permanently hidden (<em>default is 500</em>)</li>
-</ul><h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>location</code></td>
+<td>On which side the button will be shown ("left" or "right")</td>
+<td>String</td>
+<td>right</td>
+</tr>
+<tr>
+<td><code>locationOffset</code></td>
+<td>How many pixel the button is distant from the edge of the screen, based on the location setted</td>
+<td>Integer</td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>bottomOffset</code></td>
+<td>How many pixel the button is distant from the bottom edge of the screen</td>
+<td>Integer</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>containerRadius</code></td>
+<td>Let you transform a square in a circle (yeah, it's magic!)</td>
+<td>Integer</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>containerClass</code></td>
+<td>The class name given to the button container</td>
+<td>String</td>
+<td>goup-container</td>
+</tr>
+<tr>
+<td><code>arrowClass</code></td>
+<td>The class name given to the arrow container</td>
+<td>String</td>
+<td>goup-arrow</td>
+</tr>
+<tr>
+<td><code>trigger</code></td>
+<td>After hoiw many scrolled down pixels the button must be shown</td>
+<td>Integer</td>
+<td>500</td>
+</tr>
+<tr>
+<td><code>animationSpeed</code></td>
+<td>The speed at which the user will be brought back to the top ("slow", "normal" or "fast")</td>
+<td>String</td>
+<td>slow</td>
+</tr>
+<tr>
+<td><code>hideUnderWidth</code></td>
+<td>The threshold of window width under which the button is permanently hidden</td>
+<td>Integer</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
+	
 <a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
 <h4>v0.1.6 (04-06-2014)</h4>
 <p>Fixed a bug for Firefox 28 preventing the button to show up.</p>
