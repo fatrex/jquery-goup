@@ -108,11 +108,28 @@ $.goup();
 <td>String</td>
 <td>goup-arrow</td>
 </tr>
+<td><code>containerColor</code></td>
+<td>The color of the container (in hex format)</td>
+<td>String</td>
+<td>#000</td>
+</tr>
+<tr>
+<td><code>arrowColor</code></td>
+<td>The color of the arrow (in hex format)</td>
+<td>String</td>
+<td>#fff</td>
+</tr>
 <tr>
 <td><code>trigger</code></td>
-<td>After hoiw many scrolled down pixels the button must be shown</td>
+<td>After hoiw many scrolled down pixels the button must be shown (bypoassed by <code>alwaysVisible</code>)</td>
 <td>Integer</td>
 <td>500</td>
+</tr>
+<tr>
+<td><code>alwaysVisible</code></td>
+<td>Set to true if u want the button to be always visible (bypass <code>trigger</code>)</td>
+<td>Boolean</td>
+<td>false</td>
 </tr>
 <tr>
 <td><code>animationSpeed</code></td>
@@ -130,12 +147,20 @@ $.goup();
 </table>
 	
 <a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
+<h4>v0.2.0 (04-08-2014)</h4>
+<ul>
+	<li>Added the option to make the button always visible (bypassing the trigger option)</li>
+	<li>Added the option to change the container and class colors</li>
+</ul>
+
 <h4>v0.1.6 (04-06-2014)</h4>
-<p>Fixed a bug for Firefox 28 preventing the button to show up.</p>
+<ul><li>Fixed a bug for Firefox 28 preventing the button to show up.</li></ul>
+
 <h4>v0.1.5 (04-06-2014)</h4>
-<p>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</p>
+<ul><li>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</li></ul>
+
 <h4>v0.1.0 (04-05-2014)</h4>
-<p>Initial Release</p>
+<ul><li>Initial Release</li></ul>
 
 <h3>
 <a name="license-and-copyright" class="anchor" href="#license-and-copyright"><span class="octicon octicon-link"></span></a>License and Copyright</h3>
