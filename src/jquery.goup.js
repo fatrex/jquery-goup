@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.1.6
+ * Version 0.2.0
  *
  */
 (function ( $ ) {
@@ -19,9 +19,12 @@
 				containerRadius : 10,
 				containerClass : 'goup-container',
 				arrowClass : 'goup-arrow',
+				alwaysVisible : false,
 				trigger: 500,
 				animationSpeed : 'slow',
-				hideUnderWidth : 500
+				hideUnderWidth : 500,
+				containerColor : '#000',
+				arrowColor : '#fff'
 			}, user_params);
 		/* */
 		
@@ -61,6 +64,18 @@
 		if (hideUnderWidth < 0) {
 			hideUnderWidth = 0;
 		}
+		
+		var checkColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+		if (checkColor.test(params.containerColor)) {
+			var containerColor = params.containerColor;
+		} else {
+			var containerColor = '#000';
+		}
+		if (checkColor.test(params.arrowColor)) {
+			var arrowColor = params.arrowColor;
+		} else {
+			var arrowColor = '#fff';
+		}
 		/* */
 		
 		/* Container Style */
@@ -69,7 +84,7 @@
 			position : 'fixed',
 			width : 40,
 			height : 40,
-			background : '#000',
+			background : containerColor,
 			cursor: 'pointer'
 		};
 		containerStyle['bottom'] = bottomOffset;
@@ -87,7 +102,7 @@
 			'padding-top' : 13,
 			'border-style' : 'solid',
 			'border-width' : '0 10px 10px 10px',
-			'border-color' : 'transparent transparent #fff transparent' 
+			'border-color' : 'transparent transparent '+arrowColor+' transparent' 
 		};
 		$(arrow).css(arrowStyle);
 		/* */
@@ -113,15 +128,19 @@
 		
 		
 		/* Trigger show event */
-		$(window).scroll(function(){
-			if ($(window).scrollTop() >= trigger && !isHidden) {
-				$(container).fadeIn();
-			}
-			
-			if ($(window).scrollTop() < trigger && !isHidden) {
-				$(container).fadeOut();
-			}
-		});
+		if (!params.alwaysVisible) {
+			$(window).scroll(function(){
+				if ($(window).scrollTop() >= trigger && !isHidden) {
+					$(container).fadeIn();
+				}
+				
+				if ($(window).scrollTop() < trigger && !isHidden) {
+					$(container).fadeOut();
+				}
+			});
+		} else {
+			$(container).fadeIn();
+		}
 		
 
 		
