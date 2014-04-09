@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.2.0
+ * Version 0.3.0
  *
  */
 (function ( $ ) {
@@ -21,7 +21,8 @@
 				arrowClass : 'goup-arrow',
 				alwaysVisible : false,
 				trigger: 500,
-				animationSpeed : 'slow',
+				entryAnimation : 'fade',
+				goupSpeed : 'slow',
 				hideUnderWidth : 500,
 				containerColor : '#000',
 				arrowColor : '#fff'
@@ -114,7 +115,7 @@
 		$(window).resize(function(){
 			if ($(window).outerWidth() <= hideUnderWidth) {
 				isHidden = true;
-				$(container).fadeOut();
+				do_animation($(container), 'hide', params.entryAnimation);
 			} else {
 				isHidden = false;
 				$(window).trigger('scroll');
@@ -131,24 +132,58 @@
 		if (!params.alwaysVisible) {
 			$(window).scroll(function(){
 				if ($(window).scrollTop() >= trigger && !isHidden) {
-					$(container).fadeIn();
+					do_animation($(container), 'show', params.entryAnimation);
 				}
 				
 				if ($(window).scrollTop() < trigger && !isHidden) {
-					$(container).fadeOut();
+					do_animation($(container), 'hide', params.entryAnimation);
 				}
 			});
 		} else {
-			$(container).fadeIn();
+			do_animation($(container), 'show', params.entryAnimation);
 		}
-		
-
+		/* If i load the page and the scroll is over the trigger, i don't have immediately the event 'scroll' */
+		if ($(window).scrollTop() >= trigger && !isHidden) {
+			do_animation($(container), 'show', params.entryAnimation);
+		}
 		
 		/* Click event */
 		$(container).on('click', function(){
-			$('html,body').animate({ scrollTop: 0 }, params.animationSpeed);
+			$('html,body').animate({ scrollTop: 0 }, params.goupSpeed);
 			return false;
 		});
 	};
+	
+	
+	/* Private function for the animation */
+	function do_animation(obj, type, animation) {
+		if (type == 'show') {
+			switch(animation) {
+				case 'fade':
+					obj.fadeIn();
+				break;
+				
+				case 'slide':
+					obj.slideDown();
+				break;
+				
+				default:
+					obj.fadeIn();
+			}
+		} else {
+			switch(animation) {
+				case 'fade':
+					obj.fadeOut();
+				break;
+				
+				case 'slide':
+					obj.slideUp();
+				break;
+				
+				default:
+					obj.fadeOut();
+			}
+		}
+	}
 	
 }( jQuery ));

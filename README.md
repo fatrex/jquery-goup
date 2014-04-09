@@ -26,11 +26,17 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `containerColor`  | The color of the container (in hex format)                                                   	 | String  | #000 			|
 | `arrowColor`      | The color of the arrow (in hex format)	                                                     | String  | #fff           |
 | `trigger`         | After how many scrolled down pixels the button must be shown (bypassed by `alwaysVisible`)     | Integer | 500            |
+| `entryAnimation`  | The animation of the show and hide events of the button ("slide" or "fade")				     | String  | fade           |
 | `alwaysVisible`   | Set to true if u want the button to be always visible (bypass `trigger`)                       | Boolean | false          |
-| `animationSpeed`  | The speed at which the user will be brought back to the top ("slow", "normal" or "fast")       | String  | slow           |
+| `goupSpeed`		| The speed at which the user will be brought back to the top ("slow", "normal" or "fast")       | String  | slow           |
 | `hideUnderWidth`  | The threshold of window width under which the button is permanently hidden                     | Integer | 500            |
 
 ### Changelog
+#### v0.3.0 (04-09-2014)
+* Renamed the option `animationSpeed` in `goupAnimation`
+* Added the option to choose the type of animation on the show/hide events of the button
+* Added a check on the scroll event: if the web page reloads over the specified trigger, the button is automatically shown without scrolling
+
 #### v0.2.0 (04-08-2014)
 * Added the option to make the button always visible (bypassing the trigger option)
 * Added the option to change the container and class colors
