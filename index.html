@@ -126,13 +126,19 @@ $.goup();
 <td>500</td>
 </tr>
 <tr>
+<td><code>entryAnimation</code></td>
+<td>The animation of the show and hide events of the button ("slide" or "fade")</td>
+<td>String</td>
+<td>fade</td>
+</tr>
+<tr>
 <td><code>alwaysVisible</code></td>
 <td>Set to true if u want the button to be always visible (bypass <code>trigger</code>)</td>
 <td>Boolean</td>
 <td>false</td>
 </tr>
 <tr>
-<td><code>animationSpeed</code></td>
+<td><code>goupSpeed</code></td>
 <td>The speed at which the user will be brought back to the top ("slow", "normal" or "fast")</td>
 <td>String</td>
 <td>slow</td>
@@ -147,6 +153,13 @@ $.goup();
 </table>
 	
 <a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
+<h4>v0.3.0 (04-09-2014)</h4>
+<ul>
+	<li>Renamed the option <code>animationSpeed</code> to <code>goupAnimation</code></li>
+	<li>Added the option to choose the type of animation on the show/hide events of the button</li>
+	<li>Added a check on the scroll event: if the web page reloads over the specified trigger, the button is automatically shown without scrolling</li>
+</ul>
+
 <h4>v0.2.0 (04-08-2014)</h4>
 <ul>
 	<li>Added the option to make the button always visible (bypassing the trigger option)</li>
