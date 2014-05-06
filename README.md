@@ -3,9 +3,7 @@ Download the minified version of the plugin, include it after jQuery and:
 ```
 <script type="text/javascript">
 $(document).ready(function(){
-
-$.goup();
-
+    $.goup();
 });
 </script>
 ```
@@ -30,8 +28,12 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `alwaysVisible`   | Set to true if u want the button to be always visible (bypass `trigger`)                       | Boolean | false          |
 | `goupSpeed`		| The speed at which the user will be brought back to the top ("slow", "normal" or "fast")       | String  | slow           |
 | `hideUnderWidth`  | The threshold of window width under which the button is permanently hidden                     | Integer | 500            |
+| `title`           | A text to show on the button mouse hover                                                       | String  | ''             |
 
 ### Changelog
+#### v0.4.0 (05-06-2014)
+* Added the option `title` that permits to add a text on the button mouse hover
+
 #### v0.3.0 (04-09-2014)
 * Renamed the option `animationSpeed` in `goupAnimation`
 * Added the option to choose the type of animation on the show/hide events of the button

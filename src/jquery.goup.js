@@ -25,7 +25,8 @@
 				goupSpeed : 'slow',
 				hideUnderWidth : 500,
 				containerColor : '#000',
-				arrowColor : '#fff'
+				arrowColor : '#fff',
+                title : ''
 			}, user_params);
 		/* */
 		
@@ -93,6 +94,7 @@
 		containerStyle['border-radius'] = containerRadius;
 		
 		$(container).css(containerStyle);
+        $(container).attr('title', params.title);
 		
 		/* Arrow Style */		
 		var arrowStyle = {};
