@@ -1,210 +1,257 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="jQuery GoUp! : A simple jQuery plugin that let users of your web pages go back directly to the top." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="https://rawgithub.com/Ryuk87/jquery-goup/master/jquery.goup.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			
-			$.goup({
-				trigger : 100,
-				bottomOffset: 150,
-				locationOffset:100,
-                title: 'This is a Demo'
-			});
-			
-		});
-	</script>
-    <title>jQuery GoUp!</title>
-  </head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://rawgithub.com/Ryuk87/jquery-goup/master/jquery.goup.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-  <body>
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 100,
+                title: 'This is a Demo',
+                titleAsText: true
+            });
+
+        });
+    </script>
+    <title>jQuery GoUp!</title>
+</head>
+
+<body>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Ryuk87/jquery-goup">View on GitHub</a>
+            <a id="forkme_banner" href="https://github.com/Ryuk87/jquery-goup">View on GitHub</a>
 
-          <h1 id="project_title">jQuery GoUp!</h1>
-          <h2 id="project_tagline">A simple jQuery plugin that let users of your web pages go back directly to the top.</h2>
+            <h1 id="project_title">jQuery GoUp!</h1>
+            <h2 id="project_tagline">A simple jQuery plugin that let users of your web pages go back directly to the top.</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Ryuk87/jquery-goup/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Ryuk87/jquery-goup/tarball/master">Download this project as a tar.gz file</a>
+                <a class="zip_download_link" href="https://github.com/Ryuk87/jquery-goup/zipball/master">Download this project as a .zip file</a>
+                <a class="tar_download_link" href="https://github.com/Ryuk87/jquery-goup/tarball/master">Download this project as a tar.gz file</a>
             </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
+        <section id="main_content" class="inner">
+            <h3>
 <a name="easy-peasy" class="anchor" href="#easy-peasy"><span class="octicon octicon-link"></span></a>Easy Peasy</h3>
 
-<p>Download the minified version of the plugin, include it after jQuery and:</p>
+            <p>Download the minified version of the plugin, include it after jQuery and:</p>
 
-<pre><code>&lt;script type="text/javascript"&gt;
+            <pre><code>&lt;script type="text/javascript"&gt;
 $(document).ready(function(){
 $.goup();
 });
 &lt;/script&gt;
 </code></pre>
 
-<h3>
+            <h3>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Demo</h3>
-<p>Yeah! You can see it in action on this page. If you scroll down, you can see, on the bottom right, the magic! </p>
+            <p>Yeah! You can see it in action on this page. If you scroll down, you can see, on the bottom right, the magic!</p>
 
 
-<h3>
+            <h3>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Type</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>location</code></td>
-<td>On which side the button will be shown ("left" or "right")</td>
-<td>String</td>
-<td>right</td>
-</tr>
-<tr>
-<td><code>locationOffset</code></td>
-<td>How many pixel the button is distant from the edge of the screen, based on the location setted</td>
-<td>Integer</td>
-<td>20</td>
-</tr>
-<tr>
-<td><code>bottomOffset</code></td>
-<td>How many pixel the button is distant from the bottom edge of the screen</td>
-<td>Integer</td>
-<td>10</td>
-</tr>
-<tr>
-<td><code>containerRadius</code></td>
-<td>Let you transform a square in a circle (yeah, it's magic!)</td>
-<td>Integer</td>
-<td>10</td>
-</tr>
-<tr>
-<td><code>containerClass</code></td>
-<td>The class name given to the button container</td>
-<td>String</td>
-<td>goup-container</td>
-</tr>
-<tr>
-<td><code>arrowClass</code></td>
-<td>The class name given to the arrow container</td>
-<td>String</td>
-<td>goup-arrow</td>
-</tr>
-<td><code>containerColor</code></td>
-<td>The color of the container (in hex format)</td>
-<td>String</td>
-<td>#000</td>
-</tr>
-<tr>
-<td><code>arrowColor</code></td>
-<td>The color of the arrow (in hex format)</td>
-<td>String</td>
-<td>#fff</td>
-</tr>
-<tr>
-<td><code>trigger</code></td>
-<td>After hoiw many scrolled down pixels the button must be shown (bypoassed by <code>alwaysVisible</code>)</td>
-<td>Integer</td>
-<td>500</td>
-</tr>
-<tr>
-<td><code>entryAnimation</code></td>
-<td>The animation of the show and hide events of the button ("slide" or "fade")</td>
-<td>String</td>
-<td>fade</td>
-</tr>
-<tr>
-<td><code>alwaysVisible</code></td>
-<td>Set to true if u want the button to be always visible (bypass <code>trigger</code>)</td>
-<td>Boolean</td>
-<td>false</td>
-</tr>
-<tr>
-<td><code>goupSpeed</code></td>
-<td>The speed at which the user will be brought back to the top ("slow", "normal" or "fast")</td>
-<td>String</td>
-<td>slow</td>
-</tr>
-<tr>
-<td><code>hideUnderWidth</code></td>
-<td>The threshold of window width under which the button is permanently hidden</td>
-<td>Integer</td>
-<td>500</td>
-</tr>
-<tr>
-<td><code>title</code></td>
-<td>A text to show on the button mouse hover</td>
-<td>String</td>
-<td>''</td>
-</tr>
-</tbody>
-</table>
-	
-<a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
-<h4>v0.4.0 (05-06-2014)</h4>
-<ul>
-	<li>Added <code>title</code> that permits to add a text on the button mouse hover</li>
-</ul>
-    
-<h4>v0.3.0 (04-09-2014)</h4>
-<ul>
-    <li>Renamed the option <code>animationSpeed</code> to <code>goupAnimation</code></li>
-	<li>Added the option to choose the type of animation on the show/hide events of the button</li>
-	<li>Added a check on the scroll event: if the web page reloads over the specified trigger, the button is automatically shown without scrolling</li>
-</ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>location</code>
+                        </td>
+                        <td>On which side the button will be shown ("left" or "right")</td>
+                        <td>String</td>
+                        <td>right</td>
+                    </tr>
+                    <tr>
+                        <td><code>locationOffset</code>
+                        </td>
+                        <td>How many pixel the button is distant from the edge of the screen, based on the location setted</td>
+                        <td>Integer</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td><code>bottomOffset</code>
+                        </td>
+                        <td>How many pixel the button is distant from the bottom edge of the screen</td>
+                        <td>Integer</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>containerRadius</code>
+                        </td>
+                        <td>Let you transform a square in a circle (yeah, it's magic!)</td>
+                        <td>Integer</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><code>containerClass</code>
+                        </td>
+                        <td>The class name given to the button container</td>
+                        <td>String</td>
+                        <td>goup-container</td>
+                    </tr>
+                    <tr>
+                        <td><code>arrowClass</code>
+                        </td>
+                        <td>The class name given to the arrow container</td>
+                        <td>String</td>
+                        <td>goup-arrow</td>
+                    </tr>
+                    <td><code>containerColor</code>
+                    </td>
+                    <td>The color of the container (in hex format)</td>
+                    <td>String</td>
+                    <td>#000</td>
+                    </tr>
+                    <tr>
+                        <td><code>arrowColor</code>
+                        </td>
+                        <td>The color of the arrow (in hex format)</td>
+                        <td>String</td>
+                        <td>#fff</td>
+                    </tr>
+                    <tr>
+                        <td><code>trigger</code>
+                        </td>
+                        <td>After hoiw many scrolled down pixels the button must be shown (bypoassed by <code>alwaysVisible</code>)</td>
+                        <td>Integer</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td><code>entryAnimation</code>
+                        </td>
+                        <td>The animation of the show and hide events of the button ("slide" or "fade")</td>
+                        <td>String</td>
+                        <td>fade</td>
+                    </tr>
+                    <tr>
+                        <td><code>alwaysVisible</code>
+                        </td>
+                        <td>Set to true if u want the button to be always visible (bypass <code>trigger</code>)</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td><code>goupSpeed</code>
+                        </td>
+                        <td>The speed at which the user will be brought back to the top ("slow", "normal" or "fast")</td>
+                        <td>String</td>
+                        <td>slow</td>
+                    </tr>
+                    <tr>
+                        <td><code>hideUnderWidth</code>
+                        </td>
+                        <td>The threshold of window width under which the button is permanently hidden</td>
+                        <td>Integer</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code>
+                        </td>
+                        <td>A text to show on the button mouse hover</td>
+                        <td>String</td>
+                        <td>''</td>
+                    </tr>
+                    <tr>
+                        <td><code>titleAsText</code>
+                        </td>
+                        <td>If true the hover title becomes a true text under the button</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code>
+                        </td>
+                        <td>The class name given to the title text</td>
+                        <td>String</td>
+                        <td>goup-text</td>
+                    </tr>
+                </tbody>
+            </table>
 
-<h4>v0.2.0 (04-08-2014)</h4>
-<ul>
-	<li>Added the option to make the button always visible (bypassing the trigger option)</li>
-	<li>Added the option to change the container and class colors</li>
-</ul>
+            <a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
+            <h4>v0.5.0 (05-10-2014)</h4>
+            <ul>
+                <li>Added the option to transform the hover title to a real text (positioned under the button).</li>
+            </ul>
 
-<h4>v0.1.6 (04-06-2014)</h4>
-<ul><li>Fixed a bug for Firefox 28 preventing the button to show up.</li></ul>
+            <h4>v0.4.0 (05-06-2014)</h4>
+            <ul>
+                <li>Added <code>title</code> that permits to add a text on the button mouse hover</li>
+            </ul>
 
-<h4>v0.1.5 (04-06-2014)</h4>
-<ul><li>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</li></ul>
+            <h4>v0.3.0 (04-09-2014)</h4>
+            <ul>
+                <li>Renamed the option <code>animationSpeed</code> to <code>goupAnimation</code>
+                </li>
+                <li>Added the option to choose the type of animation on the show/hide events of the button</li>
+                <li>Added a check on the scroll event: if the web page reloads over the specified trigger, the button is automatically shown without scrolling</li>
+            </ul>
 
-<h4>v0.1.0 (04-05-2014)</h4>
-<ul><li>Initial Release</li></ul>
+            <h4>v0.2.0 (04-08-2014)</h4>
+            <ul>
+                <li>Added the option to make the button always visible (bypassing the trigger option)</li>
+                <li>Added the option to change the container and class colors</li>
+            </ul>
 
-<h3>
+            <h4>v0.1.6 (04-06-2014)</h4>
+            <ul>
+                <li>Fixed a bug for Firefox 28 preventing the button to show up.</li>
+            </ul>
+
+            <h4>v0.1.5 (04-06-2014)</h4>
+            <ul>
+                <li>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</li>
+            </ul>
+
+            <h4>v0.1.0 (04-05-2014)</h4>
+            <ul>
+                <li>Initial Release</li>
+            </ul>
+
+            <h3>
 <a name="license-and-copyright" class="anchor" href="#license-and-copyright"><span class="octicon octicon-link"></span></a>License and Copyright</h3>
 
-<p>jQuery GoUp! is dual licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> and <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> licenses.</p>
+            <p>jQuery GoUp! is dual licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> and <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> licenses.</p>
 
-<p>(c) 2014 Daniele "Ryuk87" Lenares</p>
-      </section>
+            <p>(c) 2014 Daniele "Ryuk87" Lenares</p>
+
+            <p>If you like my work, offer me a beer/coffee/cappuccino on <a href="https://www.gittip.com/Ryuk87/">Gittip</a>
+            </p>
+        </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">jQuery GoUp! maintained by <a href="https://github.com/Ryuk87">Ryuk87</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+        <footer class="inner">
+            <p class="copyright">jQuery GoUp! maintained by <a href="https://github.com/Ryuk87">Ryuk87</a>
+            </p>
+            <p>Published with <a href="http://pages.github.com">GitHub Pages</a>
+            </p>
+        </footer>
     </div>
 
-    
 
-  </body>
+
+</body>
+
 </html>
