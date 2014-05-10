@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.4.0
+ * Version 0.5.0
  *
  */
 (function ( $ ) {
@@ -26,7 +26,9 @@
 				hideUnderWidth : 500,
 				containerColor : '#000',
 				arrowColor : '#fff',
-                title : ''
+                title : '',
+                titleAsText : false,
+                titleAsTextClass : 'goup-text'
 			}, user_params);
 		/* */
 		
@@ -78,6 +80,10 @@
 		} else {
 			var arrowColor = '#fff';
 		}
+        
+        if (params.title === '') {
+            params.titleAsText = false;
+        }
 		/* */
 		
 		/* Container Style */
@@ -94,7 +100,21 @@
 		containerStyle['border-radius'] = containerRadius;
 		
 		$(container).css(containerStyle);
-        $(container).attr('title', params.title);
+        if (!params.titleAsText) {
+            $(container).attr('title', params.title);
+        } else {
+            $('body').append('<div class="'+params.titleAsTextClass+'">'+params.title+'</div>');
+            var textContainer = $('.'+params.titleAsTextClass);
+            $(textContainer).attr('style', $(container).attr('style'));
+            $(textContainer).css('background','transparent')
+                           .css('width',80)
+                           .css('height','auto')
+                           .css('text-align','center')
+                           .css('right',0);
+            var containerNewBottom = $(textContainer).height() + 10;
+            $(container).css('bottom', '+='+containerNewBottom+'px');
+        }
+            
 		
 		/* Arrow Style */		
 		var arrowStyle = {};
@@ -118,6 +138,8 @@
 			if ($(window).outerWidth() <= hideUnderWidth) {
 				isHidden = true;
 				do_animation($(container), 'hide', params.entryAnimation);
+                if (textContainer)
+                    do_animation($(textContainer), 'hide', params.entryAnimation);
 			} else {
 				isHidden = false;
 				$(window).trigger('scroll');
@@ -127,6 +149,8 @@
 		if ($(window).outerWidth() <= hideUnderWidth) {
 			isHidden = true;
 			$(container).hide();
+            if (textContainer)
+                $(textContainer).hide();
 		}
 		
 		
@@ -135,22 +159,35 @@
 			$(window).scroll(function(){
 				if ($(window).scrollTop() >= trigger && !isHidden) {
 					do_animation($(container), 'show', params.entryAnimation);
+                    if (textContainer)
+                        do_animation($(textContainer), 'show', params.entryAnimation);
 				}
 				
 				if ($(window).scrollTop() < trigger && !isHidden) {
 					do_animation($(container), 'hide', params.entryAnimation);
+                    if (textContainer)
+                        do_animation($(textContainer), 'hide', params.entryAnimation);
 				}
 			});
 		} else {
 			do_animation($(container), 'show', params.entryAnimation);
+            if (textContainer)
+                do_animation($(textContainer), 'show', params.entryAnimation);
 		}
 		/* If i load the page and the scroll is over the trigger, i don't have immediately the event 'scroll' */
 		if ($(window).scrollTop() >= trigger && !isHidden) {
 			do_animation($(container), 'show', params.entryAnimation);
+            if (textContainer)
+                do_animation($(textContainer), 'show', params.entryAnimation);
 		}
 		
 		/* Click event */
 		$(container).on('click', function(){
+			$('html,body').animate({ scrollTop: 0 }, params.goupSpeed);
+			return false;
+		});		
+        
+        $(textContainer).on('click', function(){
 			$('html,body').animate({ scrollTop: 0 }, params.goupSpeed);
 			return false;
 		});

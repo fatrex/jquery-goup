@@ -29,8 +29,13 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `goupSpeed`		| The speed at which the user will be brought back to the top ("slow", "normal" or "fast")       | String  | slow           |
 | `hideUnderWidth`  | The threshold of window width under which the button is permanently hidden                     | Integer | 500            |
 | `title`           | A text to show on the button mouse hover                                                       | String  | ''             |
+| `titleAsText`     | If true the hover title becomes a true text under the button                                   | Boolean | false          |
+| `titleAsTextClass`| The class name given to the title text                                                         | String  | goup-text      |
 
 ### Changelog
+#### v0.5.0 (05-10-2014)
+* Added the option to transform the hover title to a real text (positioned under the button).
+
 #### v0.4.0 (05-06-2014)
 * Added the option `title` that permits to add a text on the button mouse hover
 
@@ -56,3 +61,5 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.html) and [MIT](http://www.opensource.org/licenses/mit-license.php) licenses.
 
 (c) 2014 Daniele "Ryuk87" Lenares
+
+If you like my work, offer me a beer/coffee/cappuccino on [Gittip](https://www.gittip.com/Ryuk87/)
