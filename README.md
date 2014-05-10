@@ -33,6 +33,9 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `titleAsTextClass`| The class name given to the title text                                                         | String  | goup-text      |
 
 ### Changelog
+#### v0.5.1 (05-10-2014)
+* Bugfix: location of title as text was setted wrong
+
 #### v0.5.0 (05-10-2014)
 * Added the option to transform the hover title to a real text (positioned under the button).
 

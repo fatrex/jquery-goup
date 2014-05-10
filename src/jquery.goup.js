@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.5.0
+ * Version 0.5.1
  *
  */
 (function ( $ ) {
@@ -110,7 +110,7 @@
                            .css('width',80)
                            .css('height','auto')
                            .css('text-align','center')
-                           .css('right',0);
+                           .css(location,locationOffset - 20);
             var containerNewBottom = $(textContainer).height() + 10;
             $(container).css('bottom', '+='+containerNewBottom+'px');
         }
