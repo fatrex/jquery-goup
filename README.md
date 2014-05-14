@@ -1,3 +1,5 @@
+![goup_logo](https://googledrive.com/host/0B3RKPTAd6l8OeDBsT0dDa1lMLXM/goup_logo_mini.jpg)
+
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
 ```
@@ -63,6 +65,8 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 ### License and Copyright
 jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.html) and [MIT](http://www.opensource.org/licenses/mit-license.php) licenses.
 
-(c) 2014 Daniele "Ryuk87" Lenares
+(c) 2014 Daniele Lenares
+
+Logo kindly created by [Emilia Balitro](http://www.behance.net/EmiliaBalitro)
 
 If you like my work, offer me a beer/coffee/cappuccino on [Gittip](https://www.gittip.com/Ryuk87/)
