@@ -4,7 +4,7 @@
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  * 
- * Version 0.5.1
+ * Version 0.6
  *
  */
 (function ( $ ) {
@@ -39,46 +39,36 @@
 		var arrow = $('.'+params.arrowClass);
 		
 		/* Parameters check */
-		var location = params.location;
-		if (location != 'right' && location != 'left') {
-			location = 'right';
+		if (params.location != 'right' && params.location != 'left') {
+			params.location = 'right';
 		}
 		
-		var locationOffset = params.locationOffset;
-		if (locationOffset < 0) {
-			locationOffset = 0;
+		if (params.locationOffset < 0) {
+			params.locationOffset = 0;
 		}
 		
-		var bottomOffset = params.bottomOffset;
-		if (bottomOffset < 0) {
-			bottomOffset = 0;
+		if (params.bottomOffset < 0) {
+			params.bottomOffset = 0;
 		}
 		
-		var containerRadius = params.containerRadius
-		if (containerRadius < 0) {
-			containerRadius = 0;
+		if (params.containerRadius < 0) {
+			params.containerRadius = 0;
 		}
 		
-		var trigger = params.trigger;
-		if (trigger < 0) {
-			trigger = 0;
+		if (params.trigger < 0) {
+			params.trigger = 0;
 		}
 		
-		var hideUnderWidth = params.hideUnderWidth;
-		if (hideUnderWidth < 0) {
-			hideUnderWidth = 0;
+		if (params.hideUnderWidth < 0) {
+			params.hideUnderWidth = 0;
 		}
 		
 		var checkColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
-		if (checkColor.test(params.containerColor)) {
-			var containerColor = params.containerColor;
-		} else {
-			var containerColor = '#000';
+		if (!checkColor.test(params.containerColor)) {
+			params.containerColor = '#000';
 		}
-		if (checkColor.test(params.arrowColor)) {
-			var arrowColor = params.arrowColor;
-		} else {
-			var arrowColor = '#fff';
+		if (!checkColor.test(params.arrowColor)) {
+			params.arrowColor = '#fff';
 		}
         
         if (params.title === '') {
@@ -92,12 +82,12 @@
 			position : 'fixed',
 			width : 40,
 			height : 40,
-			background : containerColor,
+			background : params.containerColor,
 			cursor: 'pointer'
 		};
-		containerStyle['bottom'] = bottomOffset;
-		containerStyle[location] = locationOffset;
-		containerStyle['border-radius'] = containerRadius;
+		containerStyle['bottom'] = params.bottomOffset;
+		containerStyle[params.location] = params.locationOffset;
+		containerStyle['border-radius'] = params.containerRadius;
 		
 		$(container).css(containerStyle);
         if (!params.titleAsText) {
@@ -106,11 +96,11 @@
             $('body').append('<div class="'+params.titleAsTextClass+'">'+params.title+'</div>');
             var textContainer = $('.'+params.titleAsTextClass);
             $(textContainer).attr('style', $(container).attr('style'));
-            $(textContainer).css('background','transparent')
-                           .css('width',80)
-                           .css('height','auto')
-                           .css('text-align','center')
-                           .css(location,locationOffset - 20);
+            $(textContainer).css('background', 'transparent')
+                           .css('width', 80)
+                           .css('height', 'auto')
+                           .css('text-align', 'center')
+                           .css(params.location, params.locationOffset - 20);
             var containerNewBottom = $(textContainer).height() + 10;
             $(container).css('bottom', '+='+containerNewBottom+'px');
         }
@@ -125,17 +115,17 @@
 			'padding-top' : 13,
 			'border-style' : 'solid',
 			'border-width' : '0 10px 10px 10px',
-			'border-color' : 'transparent transparent '+arrowColor+' transparent' 
+			'border-color' : 'transparent transparent '+params.arrowColor+' transparent' 
 		};
 		$(arrow).css(arrowStyle);
 		/* */
 		
 		
 		
-		/* Trigger Hide under a certain width */
+		/* params.trigger Hide under a certain width */
 		var isHidden = false;
 		$(window).resize(function(){
-			if ($(window).outerWidth() <= hideUnderWidth) {
+			if ($(window).outerWidth() <= params.hideUnderWidth) {
 				isHidden = true;
 				do_animation($(container), 'hide', params.entryAnimation);
                 if (textContainer)
@@ -146,7 +136,7 @@
 			}
 		});
 		/* If i load the page under a certain width, i don't have the event 'resize' */
-		if ($(window).outerWidth() <= hideUnderWidth) {
+		if ($(window).outerWidth() <= params.hideUnderWidth) {
 			isHidden = true;
 			$(container).hide();
             if (textContainer)
@@ -154,16 +144,16 @@
 		}
 		
 		
-		/* Trigger show event */
+		/* params.trigger show event */
 		if (!params.alwaysVisible) {
 			$(window).scroll(function(){
-				if ($(window).scrollTop() >= trigger && !isHidden) {
+				if ($(window).scrollTop() >= params.trigger && !isHidden) {
 					do_animation($(container), 'show', params.entryAnimation);
                     if (textContainer)
                         do_animation($(textContainer), 'show', params.entryAnimation);
 				}
 				
-				if ($(window).scrollTop() < trigger && !isHidden) {
+				if ($(window).scrollTop() < params.trigger && !isHidden) {
 					do_animation($(container), 'hide', params.entryAnimation);
                     if (textContainer)
                         do_animation($(textContainer), 'hide', params.entryAnimation);
@@ -175,7 +165,7 @@
                 do_animation($(textContainer), 'show', params.entryAnimation);
 		}
 		/* If i load the page and the scroll is over the trigger, i don't have immediately the event 'scroll' */
-		if ($(window).scrollTop() >= trigger && !isHidden) {
+		if ($(window).scrollTop() >= params.trigger && !isHidden) {
 			do_animation($(container), 'show', params.entryAnimation);
             if (textContainer)
                 do_animation($(textContainer), 'show', params.entryAnimation);
