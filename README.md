@@ -35,7 +35,7 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `titleAsTextClass`| The class name given to the title text                                                         | String  | goup-text      |
 
 ### Changelog
-#### v0.6 (07-18-2014)
+#### v0.6.0 (07-18-2014)
 * Some code changes
 
 #### v0.5.2 (07-14-2014)
