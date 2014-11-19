@@ -16,6 +16,7 @@
 				location : 'right',
 				locationOffset : 20,
 				bottomOffset : 10,
+				containerSize : 40,
 				containerRadius : 10,
 				containerClass : 'goup-container',
 				arrowClass : 'goup-arrow',
@@ -51,6 +52,10 @@
 			params.bottomOffset = 0;
 		}
 		
+		if (params.containerSize < 20) {
+			params.containerSize = 20;
+		}
+
 		if (params.containerRadius < 0) {
 			params.containerRadius = 0;
 		}
@@ -80,8 +85,8 @@
 		var containerStyle = {};
 		containerStyle = {
 			position : 'fixed',
-			width : 40,
-			height : 40,
+			width : params.containerSize,
+			height : params.containerSize,
 			background : params.containerColor,
 			cursor: 'pointer'
 		};
@@ -97,7 +102,7 @@
             var textContainer = $('.'+params.titleAsTextClass);
             $(textContainer).attr('style', $(container).attr('style'));
             $(textContainer).css('background', 'transparent')
-                           .css('width', 80)
+                           .css('width', params.containerSize + 40)
                            .css('height', 'auto')
                            .css('text-align', 'center')
                            .css(params.location, params.locationOffset - 20);
@@ -108,13 +113,14 @@
 		
 		/* Arrow Style */		
 		var arrowStyle = {};
+		var borderSize = 0.25 * params.containerSize;
 		arrowStyle = {
 			width : 0,
 			height : 0,
 			margin : '0 auto',
-			'padding-top' : 13,
+			'padding-top' : Math.ceil(0.325 * params.containerSize),
 			'border-style' : 'solid',
-			'border-width' : '0 10px 10px 10px',
+			'border-width' : '0 '+borderSize+'px '+borderSize+'px '+borderSize+'px',
 			'border-color' : 'transparent transparent '+params.arrowColor+' transparent' 
 		};
 		$(arrow).css(arrowStyle);
