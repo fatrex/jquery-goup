@@ -20,6 +20,7 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `location`        | On which side the button will be shown ("left" or "right")                                     | String  | right          |
 | `locationOffset`  | How many pixel the button is distant from the edge of the screen, based on the location setted | Integer | 20             |
 | `bottomOffset`    | How many pixel the button is distant from the bottom edge of the screen                        | Integer | 10             |
+| `containerSize` 	| The width and height of the button (minimum is 20)                                     		 | Integer | 40             |
 | `containerRadius` | Let you transform a square in a circle (yeah, it's magic!)                                     | Integer | 10             |
 | `containerClass`  | The class name given to the button container                                                   | String  | goup-container |
 | `arrowClass`      | The class name given to the arrow container                                                    | String  | goup-arrow     |
@@ -35,6 +36,9 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `titleAsTextClass`| The class name given to the title text                                                         | String  | goup-text      |
 
 ### Changelog
+#### v1.0.0 (11-19-2014)
+* Added button size
+
 #### v0.7.0 (11-19-2014)
 * Fixed multiple click bug (issue #4)
 * Some code changes
@@ -79,4 +83,4 @@ jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.ht
 
 Logo kindly created by [Emilia Balitro](http://www.behance.net/EmiliaBalitro)
 
-If you like my work, offer me a beer/coffee/cappuccino on [Gittip](https://www.gittip.com/Ryuk87/)
+If you like my work, offer me a beer/coffee/cappuccino on [Gratipay](https://gratipay.com/Ryuk87/)
