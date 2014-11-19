@@ -22,7 +22,7 @@
         "backtotop",
         "scrolltotop"
     ],
-    "dependencies": {
+    "browserDependencies": {
         "jquery": ">=1.5"
     },
     "licenses": [
