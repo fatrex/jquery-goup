@@ -173,7 +173,7 @@
 		
 		/* Click event */
 		var notClicked = true;
-		$(container).on('click', function(){
+		$(container).add(textContainer).on('click', function(){
 			if (notClicked) {
 				notClicked = false;
 				$('html,body').animate({ scrollTop: 0 }, params.goupSpeed, function(){ notClicked = true });
@@ -182,13 +182,6 @@
 
 		});		
         
-        $(textContainer).on('click', function(){
-			if (notClicked) {
-				notClicked = false;
-				$('html,body').animate({ scrollTop: 0 }, params.goupSpeed, function(){ notClicked = true });
-			}
-			return false;
-		});
 	};
 	
 	
