@@ -2,8 +2,12 @@
     "name": "jquery-goup",
     "version": "1.0.0",
     "description": "A simple jQuery plugin that let users go back to the top of a web page.",
-    "author": "Daniele Lenares <daniele.lenares@gmail.com>",
+    "homepage": "https://github.com/Ryuk87/jquery-goup",
+    "author": "Daniele Lenares <daniele.lenares@gmail.com> (https://github.com/Ryuk87)",
     "main": "src/jquery.goup.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Ryuk87/jquery-goup"
@@ -30,5 +34,5 @@
             "type":"GPL",
             "url":"http://www.gnu.org/licenses/gpl.html"    
         }
-    ],
+    ]
 }
