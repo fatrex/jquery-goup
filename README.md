@@ -11,7 +11,7 @@ $(document).ready(function(){
 ```
 
 ### Demo
-Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
+Yeah! You can see a live demo here: http://eighty-seven.github.io/jquery-goup/
 
 ### Options
 
