@@ -38,6 +38,7 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 
 ### Changelog
 #### v1.1.0 (05-08-2016)
+* Added `zIndex` parameter
 * Some code refactoring
 
 #### v1.0.0 (11-19-2014)
