@@ -1,5 +1,16 @@
 ### Changelog
 
+#### v1.1.0 (05-08-2016)
+* Added `zIndex` parameter
+* Some code refactoring
+
+#### v1.0.0 (11-19-2014)
+* Added button size
+
+#### v0.7.0 (11-19-2014)
+* Fixed multiple click bug (issue #4)
+* Some code changes
+
 #### v0.6.0 (07-18-2014)
 * Some code changes
 

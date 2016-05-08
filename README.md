@@ -3,9 +3,9 @@
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
 ```
-<script type="text/javascript">
-$(document).ready(function(){
-    $.goup();
+<script>
+jQuery(document).ready(function(){
+    jQuery.goup();
 });
 </script>
 ```
@@ -34,14 +34,14 @@ Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
 | `title`           | A text to show on the button mouse hover                                                       | String  | ''             |
 | `titleAsText`     | If true the hover title becomes a true text under the button                                   | Boolean | false          |
 | `titleAsTextClass`| The class name given to the title text                                                         | String  | goup-text      |
+| `zIndex`          | Set the z-index                                                                                | Integer | 1              |
 
 ### Changelog
+#### v1.1.0 (05-08-2016)
+* Some code refactoring
+
 #### v1.0.0 (11-19-2014)
 * Added button size
-
-#### v0.7.0 (11-19-2014)
-* Fixed multiple click bug (issue #4)
-* Some code changes
 
 For more changelog info check the `CHANGELOG.md` file.
 
@@ -51,5 +51,3 @@ jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.ht
 (c) 2014-2016 Daniele Lenares
 
 Logo kindly created by [Emilia Balitro](http://www.behance.net/EmiliaBalitro)
-
-If you like my work, offer me a beer/coffee/cappuccino on [Gratipay](https://gratipay.com/Ryuk87/)
