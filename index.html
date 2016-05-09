@@ -11,7 +11,6 @@
     <script type="text/javascript" src="https://rawgithub.com/Ryuk87/jquery-goup/master/jquery.goup.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
             $.goup({
                 trigger: 100,
                 bottomOffset: 150,
@@ -19,7 +18,6 @@
                 title: 'This is a Demo',
                 titleAsText: true
             });
-
         });
     </script>
     <title>jQuery GoUp!</title>
@@ -51,9 +49,9 @@
 
             <p>Download the minified version of the plugin, include it after jQuery and:</p>
 
-            <pre><code>&lt;script type="text/javascript"&gt;
-$(document).ready(function(){
-$.goup();
+            <pre><code>&lt;script&gt;
+jQuery(document).ready(function(){
+jQuery.goup();
 });
 &lt;/script&gt;
 </code></pre>
@@ -180,71 +178,33 @@ $.goup();
                         <td>false</td>
                     </tr>
                     <tr>
-                        <td><code>title</code>
+                        <td><code>titleAsTextClass</code>
                         </td>
                         <td>The class name given to the title text</td>
                         <td>String</td>
                         <td>goup-text</td>
                     </tr>
+                    <tr>
+                        <td><code>zIndex</code>
+                        </td>
+                        <td>Set the z-index</td>
+                        <td>Integer</td>
+                        <td>1</td>
+                    </tr>
                 </tbody>
             </table>
 
             <a name="future-versions" class="anchor" href="#future-versions"><span class="octicon octicon-link"></span></a>Changelog</h3>
-            <h4>v0.5.1 (05-10-2014)</h4>
-            <ul>
-                <li>Bugfix: location of title as text was setted wrong.</li>
-            </ul>
-            
-            <h4>v0.5.0 (05-10-2014)</h4>
-            <ul>
-                <li>Added the option to transform the hover title to a real text (positioned under the button).</li>
-            </ul>
-
-            <h4>v0.4.0 (05-06-2014)</h4>
-            <ul>
-                <li>Added <code>title</code> that permits to add a text on the button mouse hover</li>
-            </ul>
-
-            <h4>v0.3.0 (04-09-2014)</h4>
-            <ul>
-                <li>Renamed the option <code>animationSpeed</code> to <code>goupAnimation</code>
-                </li>
-                <li>Added the option to choose the type of animation on the show/hide events of the button</li>
-                <li>Added a check on the scroll event: if the web page reloads over the specified trigger, the button is automatically shown without scrolling</li>
-            </ul>
-
-            <h4>v0.2.0 (04-08-2014)</h4>
-            <ul>
-                <li>Added the option to make the button always visible (bypassing the trigger option)</li>
-                <li>Added the option to change the container and class colors</li>
-            </ul>
-
-            <h4>v0.1.6 (04-06-2014)</h4>
-            <ul>
-                <li>Fixed a bug for Firefox 28 preventing the button to show up.</li>
-            </ul>
-
-            <h4>v0.1.5 (04-06-2014)</h4>
-            <ul>
-                <li>Added width threshold (<em>hideUnderWidth</em>) to hide the button on small screens.</li>
-            </ul>
-
-            <h4>v0.1.0 (04-05-2014)</h4>
-            <ul>
-                <li>Initial Release</li>
-            </ul>
+            <p>You can see the updated changelog in the repository page.</p>
 
             <h3>
 <a name="license-and-copyright" class="anchor" href="#license-and-copyright"><span class="octicon octicon-link"></span></a>License and Copyright</h3>
 
             <p>jQuery GoUp! is dual licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> and <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> licenses.</p>
 
-            <p>(c) 2014 Daniele Lenares</p>
+            <p>&copy; 2014-2016 Daniele Lenares</p>
     
             <p>Logo kindly created by <a href="http://www.behance.net/EmiliaBalitro">Emilia Balitro</a></p>
-
-            <p>If you like my work, offer me a beer/coffee/cappuccino on <a href="https://www.gittip.com/Ryuk87/">Gittip</a>
-            </p>
         </section>
     </div>
 
