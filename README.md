@@ -1,5 +1,8 @@
 ![goup_logo](https://googledrive.com/host/0B3RKPTAd6l8OeDBsT0dDa1lMLXM/goup_logo_mini.jpg)
 
+#### IMPORTANT: I'm rewriting the plugin as a JavaScript only plugin (jQuery independent).
+#### You can follow the new version here: https://github.com/Ryuk87/goupjs
+---
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
 ```
