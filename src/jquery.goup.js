@@ -24,11 +24,9 @@
                 case 'fade':
                     $obj.fadeIn();
                     break;
-
                 case 'slide':
                     $obj.slideDown();
                     break;
-
                 default:
                     $obj.fadeIn();
             }
@@ -37,11 +35,9 @@
                 case 'fade':
                     $obj.fadeOut();
                     break;
-
                 case 'slide':
                     $obj.slideUp();
                     break;
-
                 default:
                     $obj.fadeOut();
             }
@@ -55,19 +51,17 @@
      */
     function click_event($obj, speed) {
         var not_clicked = true;
-        $obj.on('click', function () {
+        $obj.on('click', function() {
             if (not_clicked == true) {
                 not_clicked = false;
-                $('html, body').animate({scrollTop: 0}, speed, function () {
+                $('html, body').animate({scrollTop: 0}, speed, jQuery.easing.def, function() {
                     not_clicked = true
                 });
             }
         });
     }
 
-
-    $.goup = function (user_params) {
-
+    $.goup = function(user_params) {
         /* Default Params */
         var params = $.extend({
             location: 'right',
@@ -79,9 +73,10 @@
             arrowClass: 'goup-arrow',
             alwaysVisible: false,
             trigger: 500,
-            entryAnimation: 'fade',
-            goupSpeed: 'slow',
+            buttonAnimation: 'fade',
+            scrollAnimation: jQuery.easing.def,
             hideUnderWidth: 500,
+            goupSpeed: 'normal',
             containerColor: '#000',
             arrowColor: '#fff',
             title: '',
@@ -89,53 +84,23 @@
             titleAsTextClass: 'goup-text',
             zIndex: 1
         }, user_params);
-        /* */
+        /* end default */
 
         /* Parameters check */
-        if (params.location != 'right' && params.location != 'left') {
-            params.location = 'right';
-        }
-
-        if (params.locationOffset < 0) {
-            params.locationOffset = 0;
-        }
-
-        if (params.bottomOffset < 0) {
-            params.bottomOffset = 0;
-        }
-
-        if (params.containerSize < 20) {
-            params.containerSize = 20;
-        }
-
-        if (params.containerRadius < 0) {
-            params.containerRadius = 0;
-        }
-
-        if (params.trigger < 0) {
-            params.trigger = 0;
-        }
-
-        if (params.hideUnderWidth < 0) {
-            params.hideUnderWidth = 0;
-        }
-
         var checkColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
-        if (!checkColor.test(params.containerColor)) {
-            params.containerColor = '#000';
-        }
-        if (!checkColor.test(params.arrowColor)) {
-            params.arrowColor = '#fff';
-        }
-
-        if (params.title === '') {
-            params.titleAsText = false;
-        }
-
-        if (isNaN(params.zIndex)) {
-            params.zIndex = 1;
-        }
-        /* */
+        if (params.location != 'right' && params.location != 'left') params.location = 'right';
+        if (params.locationOffset < 0) params.locationOffset = 0;
+        if (params.bottomOffset < 0) params.bottomOffset = 0;
+        if (params.containerSize < 20) params.containerSize = 20;
+        if (params.containerRadius < 0) params.containerRadius = 0;
+        if (params.trigger < 0) params.trigger = 0;
+        if (params.hideUnderWidth < 0) params.hideUnderWidth = 0;
+        if (!checkColor.test(params.containerColor)) params.containerColor = '#000';
+        if (!checkColor.test(params.arrowColor)) params.arrowColor = '#fff';
+        if (params.title === '') params.titleAsText = false;
+        if (isNaN(params.zIndex)) params.zIndex = 1;
+        jQuery.easing.def = params.scrollAnimation;
+        /* end check */
 
         /* Create required elements */
         var $body = $('body');
@@ -161,6 +126,7 @@
             display: 'none',
             'z-index': params.zIndex
         };
+
         containerStyle['bottom'] = params.bottomOffset;
         containerStyle[params.location] = params.locationOffset;
         containerStyle['border-radius'] = params.containerRadius;
@@ -188,7 +154,7 @@
 
         /* Arrow Style */
         var borderSize = 0.25 * params.containerSize;
-        var arrowStyle = {
+        $arrow.css({
             width: 0,
             height: 0,
             margin: '0 auto',
@@ -196,14 +162,11 @@
             'border-style': 'solid',
             'border-width': '0 ' + borderSize + 'px ' + borderSize + 'px ' + borderSize + 'px',
             'border-color': 'transparent transparent ' + params.arrowColor + ' transparent'
-        };
-        $arrow.css(arrowStyle);
-        /* */
-
-
+        });
+        
         /* params.trigger Hide under a certain width */
-        var isHidden = false;
-        $window.resize(function () {
+       var isHidden = false;
+       $window.resize(function () {
             if ($window.outerWidth() <= params.hideUnderWidth) {
                 isHidden = true;
                 do_animation($container, 'hide', params.entryAnimation);
@@ -226,38 +189,31 @@
 
         /* params.trigger show event */
         if (!params.alwaysVisible) {
-            $window.scroll(function () {
-                if ($window.scrollTop() >= params.trigger && !isHidden) {
-                    do_animation($container, 'show', params.entryAnimation);
-                    if (typeof($textContainer) != "undefined") {
-                        do_animation($textContainer, 'show', params.entryAnimation);
-                    }
-                }
-
-                if ($window.scrollTop() < params.trigger && !isHidden) {
-                    do_animation($container, 'hide', params.entryAnimation);
-                    if (typeof($textContainer) != "undefined") {
-                        do_animation($textContainer, 'hide', params.entryAnimation);
+            $window.scroll(function() {
+                if (!isHidden) {
+                    if ($window.scrollTop() >= params.trigger) {
+                        do_animation($container, 'show', params.buttonAnimation);
+                        if (typeof ($textContainer) != "undefined") {
+                            do_animation($textContainer, 'show', params.buttonAnimation);
+                        }
+                    } else {
+                        do_animation($container, 'hide', params.buttonAnimation);
+                        if (typeof ($textContainer) != "undefined") {
+                            do_animation($textContainer, 'hide', params.buttonAnimation);
+                        }
                     }
                 }
             });
         } else {
-            do_animation($container, 'show', params.entryAnimation);
-            if (typeof($textContainer) != "undefined") {
-                do_animation($textContainer, 'show', params.entryAnimation);
-            }
-        }
-        /* If i load the page and the scroll is over the trigger, i don't have immediately the event 'scroll' */
-        if ($window.scrollTop() >= params.trigger && !isHidden) {
-            do_animation($container, 'show', params.entryAnimation);
-            if (typeof($textContainer) != "undefined") {
-                do_animation($textContainer, 'show', params.entryAnimation);
+            do_animation($container, 'show', params.buttonAnimation);
+            if (typeof ($textContainer) != "undefined") {
+                do_animation($textContainer, 'show', params.buttonAnimation);
             }
         }
 
         click_event($container, params.goupSpeed);
-        if (typeof($textContainer) != 'undefined') {
+        if (typeof ($textContainer) != 'undefined') {
             click_event($textContainer, params.goupSpeed);
         }
     };
-}(jQuery));
+} (jQuery));
