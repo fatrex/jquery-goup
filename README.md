@@ -1,4 +1,4 @@
-![goup_logo](https://googledrive.com/host/0B3RKPTAd6l8OeDBsT0dDa1lMLXM/goup_logo_mini.jpg)
+![goup_logo](https://lh4.googleusercontent.com/46o0Ot2qBjRn3nemBjk6OT13Vhdpk-z2gWf2CJMAoQ3eah13q56FKPWa1QLbSDTCXdvFQGiBxlE8jGU=w2880-h1312-rw)
 
 #### IMPORTANT: I'm rewriting the plugin as a JavaScript only plugin (jQuery independent).
 #### You can follow the new version here: https://github.com/Ryuk87/goupjs
