@@ -1,7 +1,8 @@
-![goup_logo](https://lh4.googleusercontent.com/46o0Ot2qBjRn3nemBjk6OT13Vhdpk-z2gWf2CJMAoQ3eah13q56FKPWa1QLbSDTCXdvFQGiBxlE8jGU=w2880-h1312-rw)
+# jQuery GoUp!
 
 #### IMPORTANT: I'm rewriting the plugin as a JavaScript only plugin (jQuery independent).
 #### You can follow the new version here: https://github.com/Ryuk87/goupjs
+#### [!] Sorry, the new development is going very slowly.
 ---
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
@@ -52,6 +53,4 @@ For more changelog info check the `CHANGELOG.md` file.
 ### License and Copyright
 jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.html) and [MIT](http://www.opensource.org/licenses/mit-license.php) licenses.
 
-(c) 2014-2016 Daniele Lenares
-
-Logo kindly created by [Emilia Balitro](http://www.behance.net/EmiliaBalitro)
+(c) 2014-2017 Daniele Lenares
