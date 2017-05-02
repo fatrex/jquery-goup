@@ -1,7 +1,7 @@
 # jQuery GoUp!
 
 #### IMPORTANT: I'm rewriting the plugin as a JavaScript only plugin (jQuery independent).
-#### You can follow the new version here: https://github.com/Ryuk87/goupjs
+#### You can follow the new version here: https://github.com/dnlnrs/goupjs
 #### [!] Sorry, the new development is going very slowly.
 ---
 #### Easy Peasy
@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 ```
 
 ### Demo
-Yeah! You can see a live demo here: http://ryuk87.github.io/jquery-goup/
+Yeah! You can see a live demo here: http://dnlnrs.github.io/jquery-goup/
 
 ### Options
 
