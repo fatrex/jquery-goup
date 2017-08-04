@@ -1,5 +1,8 @@
 ### Changelog
 
+#### v1.1.1 (04-08-2017)
+* Year and url update
+
 #### v1.1.0 (05-08-2016)
 * Added `zIndex` parameter
 * Some code refactoring

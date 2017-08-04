@@ -1,10 +1,10 @@
 /*
  *
- * Copyright (c) 2014-2016 Daniele Lenares (https://github.com/Ryuk87)
+ * Copyright (c) 2014-2017 Daniele Lenares (https://github.com/dnlnrs)
  * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
  *
- * Version 1.1.0
+ * Version 1.1.1
  *
  */
 (function ($) {

@@ -1,7 +1,7 @@
 {
     "name": "jquery-goup",
-    "version": "1.1.0",
-    "homepage": "https://github.com/Ryuk87/jquery-goup",
+    "version": "1.1.1",
+    "homepage": "https://github.com/dnlnrs/jquery-goup",
     "description": "A simple jQuery plugin that let users go back to the top of a web page.",
     "main": "./src/jquery.goup.js",
     "keywords": [
