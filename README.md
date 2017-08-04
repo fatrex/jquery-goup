@@ -1,8 +1,5 @@
 # jQuery GoUp!
 
-#### IMPORTANT: I'm rewriting the plugin as a JavaScript only plugin (jQuery independent).
-#### You can follow the new version here: https://github.com/dnlnrs/goupjs
-#### [!] Sorry, the new development is going very slowly.
 ---
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
