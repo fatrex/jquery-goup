@@ -1,7 +1,7 @@
 # jQuery GoUp!
 A simple jQuery plugin that let users go back to the top of a web page.
 
-[![Gratipay User](https://img.shields.io/gratipay/user/dnlnrs.svg?style=flat-square)]()
+[![Gratipay User](https://img.shields.io/gratipay/user/dnlnrs.svg?style=flat-square)](https://gratipay.com/~dnlnrs/)
 
 ---
 #### Easy Peasy
