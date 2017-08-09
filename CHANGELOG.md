@@ -1,6 +1,9 @@
 ### Changelog
 
-#### v1.1.1 (04-08-2017)
+#### v1.1.2 (08-09-2017)
+* Some code refactoring
+
+#### v1.1.1 (08-05-2017)
 * Year and url update
 
 #### v1.1.0 (05-08-2016)
