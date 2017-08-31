@@ -1,38 +1,42 @@
 {
-    "name": "jquery-goup",
-    "version": "1.1.2",
-    "description": "A simple jQuery plugin that let users go back to the top of a web page.",
-    "homepage": "https://github.com/dnlnrs/jquery-goup",
-    "author": "Daniele Lenares <daniele.lenares@gmail.com> (https://github.com/dnlnrs)",
-    "main": "src/jquery.goup.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "jquery-goup",
+  "version": "1.1.2",
+  "description": "A simple jQuery plugin that let users go back to the top of a web page.",
+  "homepage": "https://github.com/dnlnrs/jquery-goup",
+  "author": "Daniele Lenares <daniele.lenares@gmail.com> (https://github.com/dnlnrs)",
+  "main": "src/jquery.goup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnlnrs/jquery-goup"
+  },
+  "bugs": {
+    "url": "https://github.com/dnlnrs/jquery-goup/issues"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "scroll",
+    "scrolltop",
+    "backtotop",
+    "scrolltotop"
+  ],
+  "browserDependencies": {
+    "jquery": ">=1.5"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dnlnrs/jquery-goup"
-    },
-    "bugs": {
-        "url": "https://github.com/dnlnrs/jquery-goup/issues"
-    },
-    "keywords": [
-        "jquery-plugin",
-        "scroll",
-        "scrolltop",
-        "backtotop",
-        "scrolltotop"
-    ],
-    "browserDependencies": {
-        "jquery": ">=1.5"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
-        },
-        {
-            "type":"GPL",
-            "url":"http://www.gnu.org/licenses/gpl.html"    
-        }
-    ]
+    {
+      "type": "GPL",
+      "url": "http://www.gnu.org/licenses/gpl.html"
+    }
+  ],
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
 }
