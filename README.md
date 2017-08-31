@@ -41,6 +41,10 @@ Yeah! You can see a live demo here: http://dnlnrs.github.io/jquery-goup/
 | `zIndex`          | Set the z-index                                                                                | Integer | 1              |
 
 ### Changelog
+#### v1.1.3 (08-31-2017)
+* Added ESLint check
+* Some code refactoring
+
 #### v1.1.2 (08-09-2017)
 * Some code refactoring
 
@@ -50,9 +54,6 @@ Yeah! You can see a live demo here: http://dnlnrs.github.io/jquery-goup/
 #### v1.1.0 (05-08-2016)
 * Added `zIndex` parameter
 * Some code refactoring
-
-#### v1.0.0 (11-19-2014)
-* Added button size
 
 For more changelog info check the `CHANGELOG.md` file.
 

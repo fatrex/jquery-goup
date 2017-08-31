@@ -1,5 +1,9 @@
 ### Changelog
 
+#### v1.1.3 (08-31-2017)
+* Added ESLint check
+* Some code refactoring
+
 #### v1.1.2 (08-09-2017)
 * Some code refactoring
 
