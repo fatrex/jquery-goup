@@ -233,9 +233,7 @@
                     if (typeof($textContainer) !== 'undefined') {
                         do_animation($textContainer, 'show', params.entryAnimation);
                     }
-                }
-
-                if ($window.scrollTop() < params.trigger && !isHidden) {
+                } else {
                     do_animation($container, 'hide', params.entryAnimation);
                     if (typeof($textContainer) !== 'undefined') {
                         do_animation($textContainer, 'hide', params.entryAnimation);
