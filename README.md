@@ -1,8 +1,6 @@
 # jQuery GoUp!
 A simple jQuery plugin that let users go back to the top of a web page.
 
-[![Gratipay User](https://img.shields.io/gratipay/user/dnlnrs.svg?style=flat-square)](https://gratipay.com/~dnlnrs/)
-
 ---
 #### Easy Peasy
 Download the minified version of the plugin, include it after jQuery and:
@@ -60,4 +58,4 @@ For more changelog info check the `CHANGELOG.md` file.
 ### License and Copyright
 jQuery GoUp! is dual licensed under the [GPL](http://www.gnu.org/licenses/gpl.html) and [MIT](http://www.opensource.org/licenses/mit-license.php) licenses.
 
-(c) 2014-2017 Daniele Lenares
+(c) 2014-2018 Daniele Lenares
